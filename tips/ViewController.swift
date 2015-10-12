@@ -27,13 +27,12 @@ class ViewController: UIViewController {
     }
 
     @IBAction func onEditingChanged(sender: AnyObject) {
-        var tipPercentages = [0.18, 0.2, 0.22]
+        var tipPercentages = [0.15, 0.2, 0.22]
         var tipPercentage = tipPercentages [tipControl.selectedSegmentIndex]
         
         var billAmounts = billField.text
         var billAmount : Double = NSString(string: billAmounts).doubleValue
         
-//        var billAmount = billField.text.bridgeToObjectiveC().doubleValue
         var tip = billAmount * tipPercentage
         var total = billAmount + tip
         
